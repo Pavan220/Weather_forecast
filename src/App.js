@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from "react";
+import Weather from "./Components/weather";
+import "./Components/weather.css";
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      lat: null,
+      long: null,
+    };
+  }
+  componentDidMount() {
+    navigator.geolocation.getCurrentPosition(
+      (succ) => {
+        this.setState({
+          lat: succ.coords.latitude,
+          long: succ.coords.longitude,
+        });
+      },
+      (err) => {
+        console.log(err.message);
+      }
+    );
+  }
+  render() {
+    return this.state.lat !== null ? (
+      <Weather Latitude={this.state.lat} Longitude={this.state.long} />
+    ) : null;
+  }
 }
 
 export default App;

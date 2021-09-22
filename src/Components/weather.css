@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+.main_container {
+  width: 1000px;
+  background: linear-gradient(to top, #f8997d, #ad336d);
+  background-size: cover;
+  height: 680px;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 1px solid #392d69;
+}
+/* ////////////CURRENT WEATHER//////////// */
+/* ///Font Weight {200,400,500}/// */
+.currentWeather {
+  background-color: rgba(255, 245, 245, 0.3);
+  border-radius: 10px;
+  width: 250px;
+  height: 250px;
+  margin: 18px auto;
+  font-family: "Raleway", sans-serif;
+  box-shadow: 3px 3px 10px rgba(52, 58, 64, 0.4);
+}
+.currTemp {
+  font-size: 70px;
+  font-weight: 400;
+  display: block;
+  text-align: center;
+  margin: 0px;
+}
+.currTemp span {
+  font-size: 40px;
+}
+.curr_weth_type {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+.curr_weth_type p {
+  font-weight: 500;
+  font-size: 20px;
+  padding-right: 12px;
+}
+.apt_temp {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+.apt_temp span {
+  font-weight: 500;
+  font-size: 23px;
+}
+.curr_wind {
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+}
+/* ////////////todays report ///// */
+.today_heading {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  color: #fff5f5;
+  font-size: 24px;
+  border-bottom: 2px solid #fff5f5;
+  padding: 0px 20px 5px;
+  margin: 70px 50px 10px 10px;
+}
+.todays_report {
+  font-family: "Raleway", sans-serif;
+  display: grid;
+  height: 250px;
+  width: auto;
+  overflow-x: scroll;
+  column-gap: 5px;
+  grid-template-columns: repeat(24, 1fr);
+  align-items: center;
+  margin: 0px 4px;
+  padding-left: 3px;
+}
+
+.hourly_report {
+  width: 160px;
+  height: 170px;
+  background-color: hsla(0, 100%, 98%, 0.7);
+  border-radius: 4px;
+  overflow: auto;
+  box-shadow: 0px 0px 4px rgba(52, 58, 64, 0.3);
+}
+.nor_temp {
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+  margin: 9px 6px 5px 17px;
+  display: inline-block;
+}
+.ap_temp {
+  font-size: 17px;
+  font-weight: 400;
+  text-align: center;
+  margin: 9px 6px 5px 5px;
+  display: inline-block;
+}
+.todays_weath_type {
+  display: grid;
+  justify-items: center;
+}
+.todays_weath_type p {
+  margin: 3px 0px;
+  font-weight: 500;
+}
+.todays_wind p {
+  text-align: center;
+  font-weight: 400;
+  margin: 2px;
+}
+.hourly_report .time {
+  margin: 0px;
+  border-top: 2px solid #868e96;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  margin: 17px 10px 0px;
+}
+/* ///scrolbar/// */
+/* width */
+::-webkit-scrollbar {
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(255, 245, 245, 0.1);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(247, 194, 230, 0.8);
+}
